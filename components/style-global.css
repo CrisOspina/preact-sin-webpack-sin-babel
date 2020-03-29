@@ -1,0 +1,103 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F8F6FC;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #909090;
+}
+
+strong {
+  color: #c854e6;
+  /* border-bottom: 0.1px solid #c854e6; */
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* transform: scale(2);
+transition: all 0.3s ease;
+animation: rotating 2s linear infinite; */
+
+strong:hover {
+  color: #909090;
+  /* border-bottom: 0.1px solid #909090;     */
+}
+
+/* Animaciones */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+  @keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.card-img:hover {
+  animation: rotating 1s forwards infinite; 
+  cursor: pointer;
+}
+
+.img-logo {
+  width: 79px;
+}
